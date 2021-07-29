@@ -3,6 +3,7 @@
   "cli": {
     "defaultCollection": "@nrwl/angular"
   },
+  "defaultProject": "app2021",
   "projects": {
     "app2021": {
       "projectType": "application",
@@ -133,6 +134,5 @@
     "@nrwl/angular:component": {
       "style": "scss"
     }
-  },
-  "defaultProject": "app2021"
+  }
 }
