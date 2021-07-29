@@ -1,0 +1,30 @@
+name: angular Structure CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+  workflow_dispatch:
+    branches:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install PNPM
+        run: npm i -g pnpm
+      - name: Install dependencies
+        run: pnpm i
+
+      - name: Build Angular app
+        run: pnpm run build
