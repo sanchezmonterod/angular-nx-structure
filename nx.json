@@ -1,7 +1,7 @@
 {
-  "npmScope": "angular-structure",
+  "npmScope": "angular-nx-structure",
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
   },
   "implicitDependencies": {
     "package.json": {
@@ -12,14 +12,12 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "NTRjZDg3MmQtYmZmYi00Y2ZiLTgyNTAtYTVlYWFjZDhlMzdlfHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
       }
     }
   },
@@ -31,5 +29,13 @@
       }
     ]
   },
-  "projects": {}
+  "projects": {
+    "app2021": {
+      "tags": []
+    },
+    "app2021-e2e": {
+      "tags": [],
+      "implicitDependencies": ["app2021"]
+    }
+  }
 }
